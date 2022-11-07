@@ -103,10 +103,9 @@ form div {
   justify-content: space-between;
 }
 
-form select,
-form input {
-  margin-bottom: 20px;
-  width: 140px;
+form select, form input {
+  margin-bottom: 10px;
+  width: 180px;
 }
 
 form button {
@@ -132,7 +131,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 481px) {
+@media all and (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -145,11 +144,6 @@ footer p {
     font-size: 42px;
   }
 
-  form select, form input {
-    margin-bottom: 20px;
-    width: 180px;
-  }
-  
   header nav ul {
     align-items: center;
   }

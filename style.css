@@ -5,7 +5,7 @@ body {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
@@ -53,28 +53,31 @@ main img {
 /* -------  Navigation ------- */
 
 header {
+  display: flex;
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  flex-direction: column;
+  width: auto;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 57px;
+  font-size: 70px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 header nav ul {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header nav ul li {
   list-style-type: none;
+  margin-bottom: 8px;
 }
 
 header nav ul li a {
@@ -92,10 +95,17 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 form label {
   font-weight: bold;
+  font-size: 22px;
 }
 
 form div {
@@ -105,7 +115,7 @@ form div {
 
 form select, form input {
   margin-bottom: 10px;
-  width: 180px;
+  width: 40%;
 }
 
 form button {
@@ -134,40 +144,71 @@ footer p {
 @media all and (min-width: 480px) {
   header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0;
+    align-items: center;
+    margin: auto;
+    text-align: left;
   }
 
   .logo {
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
+    font-size: 30px;
   }
 
-  header nav ul {
-    align-items: center;
-  }
-
-  .group {
-    flex-direction: row;
-    align-items: center;
+  header nav {
+    align-content: left;
   }
 
   form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  form label {
+    font-size: 20px;
+    width: 100%;
   }
 
   form div {
-    flex-direction: column;
+    flex: 1;
+    display: block;
+    margin-right: 10px;
   }
 
   form button {
     flex: 1;
+    width: 150px;
   }
   
   form select, form input {
-    margin-bottom: 0px;
+    display: block;
+    width: 150px;
+  }
+
+  #about .about {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #ideas .outer {
+    display: flex;
+  }
+
+  .outer .inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+  }
+
+  #host .inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .box {
+    flex: 1;
+    margin: 0 5px 0 5px;
   }
 }

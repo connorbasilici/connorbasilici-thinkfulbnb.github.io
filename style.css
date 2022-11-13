@@ -28,6 +28,8 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 main img {
@@ -188,6 +190,12 @@ footer p {
   #about .about {
     display: flex;
     flex-direction: row;
+  }
+
+  #about .div {
+    margin: 0 10px;
+    align-items: center;
+    padding: 0;
   }
 
   #ideas .outer {
